@@ -1,7 +1,12 @@
-import { HeroContainer } from './styles'
+import { useTheme } from 'styled-components'
+import { HeroContainer, HeroItem, HeroImage } from './styles'
 import CoffeeCup from './assets/coffee-cup.svg'
 
+import { ShoppingCart, Package, Timer, Coffee } from 'phosphor-react'
+
 export function Hero() {
+  const theme = useTheme()
+
   return (
     <HeroContainer>
       <div className="hero-left-section">
@@ -14,11 +19,47 @@ export function Hero() {
             hora
           </p>
         </div>
-        <div className="div-items">Item 1 Item 2 Item 3 Item 4</div>
+        <div className="div-items">
+          <HeroItem color={theme['product/yellow-dark']}>
+            <span className="item-icon">
+              <ShoppingCart
+                size={16}
+                weight="fill"
+                color={theme['base/background']}
+              />
+            </span>
+            <span className="item-text">Compra simples e segura</span>
+          </HeroItem>
+          <HeroItem color={theme['base/text']}>
+            <span className="item-icon" color="red">
+              <Package
+                size={16}
+                weight="fill"
+                color={theme['base/background']}
+              />
+            </span>
+            <span className="item-text">Embalagem mantém o café intacto</span>
+          </HeroItem>
+          <HeroItem color={theme['product/yellow']}>
+            <span className="item-icon" color="yellow">
+              <Timer size={16} weight="fill" color={theme['base/background']} />
+            </span>
+            <span className="item-text">Entrega rápida e rastreada</span>
+          </HeroItem>
+          <HeroItem color={theme['product/purple']}>
+            <span className="item-icon" color="green">
+              <Coffee
+                size={16}
+                weight="fill"
+                color={theme['base/background']}
+              />
+            </span>
+            <span className="item-text">O café chega fresquinho até você</span>
+          </HeroItem>
+        </div>
       </div>
       <div className="hero-right-section">
-        {/* <img src={CoffeeCup} alt="Copo de Café" /> */}
-        <text>Imagem do Copo de Café</text>
+        <HeroImage src={CoffeeCup} alt="Copo de Café" />
       </div>
     </HeroContainer>
   )
