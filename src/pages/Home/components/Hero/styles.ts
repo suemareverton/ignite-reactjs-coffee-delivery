@@ -6,7 +6,6 @@ export const HeroContainer = styled.div`
   justify-content: space-between;
   align-items: space-between;
   gap: 3.5rem;
-  /* height: 34rem; */
   padding: 6.25rem 10rem;
   background: url(${background});
 
@@ -41,8 +40,8 @@ export const HeroContainer = styled.div`
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-content: space-between;
-      height: 5.25rem;
-      row-gap: 1.25rem;
+      grid-row-gap: 1.25rem;
+      grid-column-gap: 1.25rem;
     }
   }
   .hero-right-section {
@@ -55,7 +54,6 @@ export const HeroItem = styled.div`
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  height: 2rem;
 
   .item-icon {
     display: flex;
