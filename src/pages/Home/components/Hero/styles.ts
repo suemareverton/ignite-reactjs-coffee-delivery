@@ -3,17 +3,29 @@ import background from './assets/background.svg'
 
 export const HeroContainer = styled.div`
   display: flex;
+  flex-wrap: wrap-reverse;
   justify-content: space-between;
   align-items: space-between;
-  gap: 3.5rem;
-  padding: 6.25rem 10rem;
+  gap: 5%;
+  padding: 6.25rem 10%;
   background: url(${background});
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .hero-right-section {
+    display: flex;
+    flex-basis: 42.5%;
+    flex-grow: 1;
+    justify-content: center;
+  }
 
   .hero-left-section {
     display: flex;
-    flex-basis: 55%;
     flex-direction: column;
     justify-content: space-between;
+    flex-basis: 52.5%;
+    flex-grow: 1;
+    flex-wrap: wrap;
 
     .div-call {
       display: flex;
@@ -38,15 +50,10 @@ export const HeroContainer = styled.div`
 
     .div-items {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      align-content: space-between;
+      grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr));
       grid-row-gap: 1.25rem;
-      grid-column-gap: 1.25rem;
+      align-content: center;
     }
-  }
-  .hero-right-section {
-    display: flex;
-    flex-basis: 45%;
   }
 `
 
@@ -77,4 +84,10 @@ export const HeroImage = styled.img`
   opacity: 0.88;
   max-width: 100%;
   height: auto;
+
+  @media (max-width: 600px) {
+    max-width: 80%;
+    margin-bottom: 2rem;
+  }
+}
 `

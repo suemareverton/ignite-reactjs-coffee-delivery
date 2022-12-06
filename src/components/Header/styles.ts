@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
-  height: 6.5rem;
-  padding: 2rem 10rem;
+  padding: 2rem 10%;
   background-color: ${(props) => props.theme['base/background']};
 
   nav {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
+    gap: 2rem;
 
     a {
       display: flex;
@@ -31,20 +31,16 @@ export const HeaderContainer = styled.header`
       display: flex;
       justify-content: center;
       gap: 0.75rem;
-      height: 2.375rem;
       font-family: Roboto, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 0.875rem;
       line-height: 130%;
+      margin: 1px 0px;
     }
 
     .div-btn {
       border: none;
-      padding: 0.5rem;
-      font-size: 0.777rem;
-      font-weight: 400;
-      line-height: 130%;
       border-radius: 6px;
     }
 
@@ -55,6 +51,7 @@ export const HeaderContainer = styled.header`
       gap: 4px;
       background-color: ${(props) => props.theme['product/purple-light']};
       color: ${(props) => props.theme['product/purple-dark']};
+      padding: 0px 10px;
     }
 
     .btn-cart {
@@ -63,7 +60,7 @@ export const HeaderContainer = styled.header`
       justify-content: center;
       background-color: ${(props) => props.theme['product/yellow-light']};
       color: ${(props) => props.theme['product/yellow-dark']};
-      width: 2.375rem;
+      padding: 0px 10px;
     }
   }
 `

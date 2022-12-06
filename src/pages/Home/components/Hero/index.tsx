@@ -12,7 +12,7 @@ export function Hero() {
       <div className="hero-left-section">
         <div className="div-call">
           <p className="text-title">
-            Encontre o café perfeito para qualquer hora do dia
+            Encontre o café perfeito <br /> para qualquer hora do dia
           </p>
           <p className="text-subtitle">
             Com o Coffee Delivery você recebe seu café onde estiver, a qualquer

@@ -1,12 +1,12 @@
 import { HomeContainer } from './styles'
 import { Hero } from './components/Hero'
-import { Coffees } from './components/Coffees'
+import { CoffeesList } from './components/CoffeesList'
 
 export function Home() {
   return (
     <HomeContainer>
       <Hero />
-      <Coffees />
+      <CoffeesList />
     </HomeContainer>
   )
 }
